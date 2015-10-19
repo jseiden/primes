@@ -1,5 +1,9 @@
+/* Prime Number Multiplication Table */
+
+// current iterative solution runs in quadratic time
+
 try {
-  // main function invocation defaults to 10 if not argument is provided
+  // main function invocation defaults to 10 if no argument is provided
   printPrimesTable(process.argv[2] || 10);
 }
 catch(err) {
@@ -35,7 +39,7 @@ function joinWithCorrectSpacing(arr, spaces) {
   return arr.reduce(function(str, num){
     var numLength = num.toString().length;
     return str.concat(num.toString(), Array(spaces + 2 - numLength).join(" "));
-  },"")
+  }, "")
 }
 
 

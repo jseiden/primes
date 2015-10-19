@@ -3,7 +3,7 @@ var color = require("colors") || undefined;
 
 
 try {
-  // main function invocation defaults to 10 if not argument is provided
+  // main function invocation defaults to 10 if no argument is provided
   printPrimesTable(process.argv[2] || 10);
 }
 catch(err) {
@@ -36,8 +36,7 @@ function printPrimesTable(n) {
 
 // join array of numbers into string with visually consistent spacing 
 function joinWithCorrectSpacing(arr, spaces) {
- 
-  // cache length of 0th number then  
+  
   var zeroLength = arr[0].toString().length;
   return arr.reduce(function(str, num){
     var numLength = zeroLength || num.toString().length;
@@ -51,7 +50,7 @@ function joinWithCorrectSpacing(arr, spaces) {
     }
 
     return str.concat(num.toString(), Array(spaces + 2 - numLength).join(" "));
-  },"")
+  }," ")
 
 }
 
