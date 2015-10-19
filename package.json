@@ -1,0 +1,20 @@
+{
+  "name": "prime-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node spec/ --verbose",
+    "table": "node table.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.3.2"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "fs": "0.0.2",
+    "jasmine-node": "^1.14.5"
+  }
+}
