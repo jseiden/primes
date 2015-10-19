@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine-node spec/ --verbose",
-    "table": "node table.js"
+    "table": "node table.js",
+    "ctable": "node ctable.js"
   },
   "author": "",
   "license": "ISC",

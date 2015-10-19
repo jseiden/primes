@@ -1,3 +1,7 @@
+// package to change text color in terminal
+var color = require("colors") || undefined;
+
+
 try {
   // main function invocation defaults to 10 if not argument is provided
   printPrimesTable(process.argv[2] || 10);
@@ -20,7 +24,7 @@ function printPrimesTable(n) {
   topRow.unshift(" ");
   topRowSpaced = joinWithCorrectSpacing(topRow, longest);
 
-  console.log(topRowSpaced);
+  console.log(topRowSpaced.blue);
   for(var m = 0; m < table.length; m++) {
     // add 1 num to each row to create first column
     var column1num = topRow[m+1].toString();
@@ -32,10 +36,23 @@ function printPrimesTable(n) {
 
 // join array of numbers into string with visually consistent spacing 
 function joinWithCorrectSpacing(arr, spaces) {
+ 
+  // cache length of 0th number then  
+  var zeroLength = arr[0].toString().length;
   return arr.reduce(function(str, num){
-    var numLength = num.toString().length;
+    var numLength = zeroLength || num.toString().length;
+
+    if(zeroLength) {
+      zeroLength = null;
+    }
+
+    if(num != " " && arr.indexOf(num) === 0) {
+      num = num.toString().magenta;
+    }
+
     return str.concat(num.toString(), Array(spaces + 2 - numLength).join(" "));
   },"")
+
 }
 
 
