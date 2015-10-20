@@ -48,7 +48,7 @@ describe("makePrimesTable", function(){
   it("returns a two-dimensional array of n length", function(){
     var testPrimesTable2 = prime.makePrimeTable(10);
     var count = 0;
-    for(var i = 0; i < testPrimesTable2.length; i++) {
+    for (var i = 0; i < testPrimesTable2.length; i++) {
       expect(Array.isArray(testPrimesTable2[i])).toBe(true);
       count++;
     }

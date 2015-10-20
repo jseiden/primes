@@ -6,7 +6,7 @@ try {
   // main function invocation defaults to 10 if no argument is provided
   printPrimesTable(process.argv[2] || 10);
 }
-catch(err) {
+catch (err) {
   console.error(err);
 }
 
@@ -25,7 +25,7 @@ function printPrimesTable(n) {
   topRowSpaced = joinWithCorrectSpacing(topRow, longest);
 
   console.log(topRowSpaced);
-  for(var m = 0; m < table.length; m++) {
+  for (var m = 0; m < table.length; m++) {
     // add 1 num to each row to create first column
     var column1num = topRow[m+1].toString();
     table[m].unshift(column1num);
@@ -48,9 +48,9 @@ function makePrimeTable(n) {
   var set = makeNPrimes(n);
   var results = [];
 
-  for(var j = 0; j < set.length; j++) {
+  for (var j = 0; j < set.length; j++) {
     var row = [];
-    for(var k = 0; k < set.length; k++) {
+    for (var k = 0; k < set.length; k++) {
       row.push(set[j] * set[k]);
     }
     results.push(row);
@@ -65,8 +65,8 @@ function makeNPrimes(n) {
   var primeCount = 0;
   var currentNum = 2
 
-  while(primeCount < n){
-    if(isPrime(currentNum)) {
+  while (primeCount < n) {
+    if (isPrime(currentNum)) {
       results.push(currentNum);
       primeCount++;
     }
@@ -78,8 +78,8 @@ function makeNPrimes(n) {
 
 // returns true if num is prime, false if not 
 function isPrime(num) {
-  for(var i = num - 1; i > 1; i--) {
-    if(num % i === 0) {
+  for (var i = num - 1; i > 1; i--) {
+    if (num % i === 0) {
       return false;
     }
   }
