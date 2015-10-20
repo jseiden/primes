@@ -6,7 +6,7 @@ try {
   // main function invocation defaults to 10 if no argument is provided
   printPrimesTable(process.argv[2] || 10);
 }
-catch(err) {
+catch (err) {
   console.error(err);
 }
 
@@ -20,7 +20,7 @@ function printPrimesTable(n) {
   var longest = table[n-1][n-1].toString().length;
   var topRow = makeNPrimes(n);
   var topRowSpaced;
-  // add blank space to topRow for table corner 
+  // add blank space to topRow for table corner
   topRow.unshift(" ");
   topRowSpaced = joinWithCorrectSpacing(topRow, longest);
 
@@ -34,10 +34,10 @@ function printPrimesTable(n) {
 }
 
 
-// join array of numbers into string with visually consistent spacing 
+// join array of numbers into string with visually consistent spacing
 function joinWithCorrectSpacing(arr, spaces) {
-  
   var zeroLength = arr[0].toString().length;
+
   return arr.reduce( function (str, num) {
     var numLength = zeroLength || num.toString().length;
 
@@ -87,8 +87,9 @@ function makeNPrimes(n) {
 }
 
 
-// returns true if num is prime, false if not 
+// returns true if num is prime, false if not
 function isPrime(num) {
+
   for (var i = num - 1; i > 1; i--) {
     if (num % i === 0) {
       return false;
