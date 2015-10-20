@@ -16,7 +16,7 @@ or `$ node ctable.js <num>` to use a positive number of your choice.
 
 ### Testing
 
-Make sure you've installed jasmine-node with `$ npm install`.
+Make sure you've installed jasmine-node with `$ npm install`.  
 Run `$ npm test` or `$ jasmine-node spec/` to run tests.
 
 
