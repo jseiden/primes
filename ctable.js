@@ -50,7 +50,7 @@ function joinWithCorrectSpacing(arr, spaces) {
     }
 
     return str.concat(num.toString(), Array(spaces + 2 - numLength).join(" "));
-  }," ")
+  }," ");
 }
 
 
@@ -74,7 +74,7 @@ function makePrimeTable(n) {
 function makeNPrimes(n) {
   var results = [];
   var primeCount = 0;
-  var currentNum = 2
+  var currentNum = 2;
 
   while (primeCount < n) {
     if (isPrime(currentNum)) {
